@@ -28,7 +28,7 @@ get_header();
       </article>
     </aside>
 
-    <main id="delikatesser">
+    <main>
     <!--H1 har et ID, da den skal styles anderledes end de andre H1'ere på sitet--> 
       <h1 id="delikatesser-overskrift">Delikatesser</h1>
       <div class="delikatesser-grid">
@@ -44,18 +44,20 @@ get_header();
             </div>
           </div>
         </nav>
+
+        <section id="loopView"></section> 
+
         </div>
 
         <!--Denne section skal indeholde vores articles--> 
-        <section id="loopView"></section> 
-        <div id="deliDetalje"></div>
+        <!-- <div id="deliDetalje"></div> -->
     </main>
 
           <!--Dette er skabelonen til vores delikatesser--> 
     <template>
       <article class="artikel">
         <img src="" alt="" />
-        <div id="deliIndhold">
+        <div id="indhold">
           <h3 id="deliTitle" class="navn">Navn</h3>
           <p id="deliBeskrivelse" class="beskrivelse"></p>
           <div class="pristilfoej">
