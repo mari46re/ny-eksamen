@@ -28,12 +28,12 @@ get_header();
       </article>
     </aside>
 
-    <main>
+    <main id="delikatesser">
     <!--H1 har et ID, da den skal styles anderledes end de andre H1'ere på sitet--> 
       <h1 id="delikatesser-overskrift">Delikatesser</h1>
       <div class="delikatesser-grid">
         <!--Her er vores dropdown-menu--> 
-        <nav id="knapper">
+        <nav>
           <div class="dropdown">
             <!-- <option value="">Vælg</option> -->
             <button onclick="toggleDropdown()" class="dropbtn">
@@ -53,7 +53,7 @@ get_header();
 
           <!--Dette er skabelonen til vores delikatesser--> 
     <template>
-      <article>
+      <article class="artikel">
         <img src="" alt="" />
         <div id="deliIndhold">
           <h3 id="deliTitle" class="navn">Navn</h3>
@@ -79,9 +79,9 @@ get_header();
       const popup = document.querySelector("#popup");
 
       const deliUrl =
-        "http://charlottefranciska.dk/kea/rosetta/wp-json/wp/v2/delikatesse?per_page=100";
+        "https://mariksen.dk/kea/2-semester/eksamen_ny/wp-json/wp/v2/delikatesse?per_page=100";
       const kateUrl =
-        "http://charlottefranciska.dk/kea/rosetta/wp-json/wp/v2/kategorier";
+        "https://mariksen.dk/kea/2-semester/eksamen_ny/wp-json/wp/v2/kategorier";
 
       document.addEventListener("DOMContentLoaded", start);
 
