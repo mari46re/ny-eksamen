@@ -44,13 +44,8 @@ get_header();
             </div>
           </div>
         </nav>
-
         <section id="loopView"></section> 
-
-        </div>
-
-        <!--Denne section skal indeholde vores articles--> 
-        <!-- <div id="deliDetalje"></div> -->
+      </div>
     </main>
 
           <!--Dette er skabelonen til vores delikatesser--> 
@@ -70,10 +65,11 @@ get_header();
 
     <script>
       // Her opretter vi variabler
+         let filter = "alle";
+      //tomme variabler, som bliver tillagt værdi senere
       let delikatesser = [];
-      let filter = "alle";
       let kategorier = [];
-
+   
       // Her opretter vi konstanter
       const loop = document.querySelector("#loopView");
       const template = document.querySelector("template").content;
@@ -97,7 +93,12 @@ get_header();
         let response = await fetch(deliUrl);
         let kateResponse = await fetch(kateUrl);
 
+        // NU bliver vores tomme variabler tillagt værdier
+
+        // Variablen delikatesser skal indeholder vores delikatesser array
         delikatesser = await response.json();
+        
+        // Variablen kategorier skal indeholder vores kategorier array
         kategorier = await kateResponse.json();
 
 

@@ -39,31 +39,28 @@ get_header();
           <button><a href="#drikkevarer">Drikkevarer</a></button>
         </nav>
         <div>
-        <section>
-          <h2>Pizza slices</h2>
-          <p>Køb vores varemærke – Romerske Pizza Slices. Disse er baseret på en lækker, sprød surdejsbund og toppet med håndplukkede råvarer i sæson.
-</p>
-          <div id="pizzaslices"></div>
-        </section>
-        <section>
-          <h2>Sandwiches</h2>
-          <p>Alle vores sandwiches er omsluttet af et filone brød, bagt på surdej og fyldt med håndplukkede råvarer i sæson.</p>
-          <div id="sandwiches"></div>
+          <section>
+            <h2 class="ret-overskrift">Pizza slices</h2>
+            <p>Køb vores varemærke – Romerske Pizza Slices. Disse er baseret på en lækker, sprød surdejsbund og toppet med håndplukkede råvarer i sæson.  </p>
+            <div id="pizzaslices"></div>
+          </section>
+          <section>
+            <h2 class="ret-overskrift">Sandwiches</h2>
+            <p>Alle vores sandwiches er omsluttet af et filone brød, bagt på surdej og fyldt med håndplukkede råvarer i sæson.</p>
+            <div id="sandwiches"></div>
 
-        </section>
-        <section>
-          <h2>Foccacia</h2>
-          <p>Store surdejs-foccacia. Disse er gode at bringe til middagsbordet derhjemme!</p>
-          <div id="foccacia"></div>
+          </section>
+          <section class="ret-overskrift">
+            <h2>Foccacia</h2>
+            <p>Store surdejs-foccacia. Disse er gode at bringe til middagsbordet derhjemme!</p>
+            <div id="foccacia"></div>
 
-        </section>
-        <section>
-          <h2>Drikkevarer</h2>
-          <p>Vælg mellem vores forfriskende Italienske eller klassiske drikke.
-
-</p>
-          <div id="drikkevarer"></div>
-        </section>
+          </section>
+          <section class="ret-overskrift">
+            <h2>Drikkevarer</h2>
+            <p>Vælg mellem vores forfriskende Italienske eller klassiske drikke.</p>
+            <div id="drikkevarer"></div>
+          </section>
         </div>
       </div>
     </main>
@@ -122,11 +119,11 @@ get_header();
         visRetter();
       }
 
-      // Delikatesserne loopes frem i denne funktion
+      // Retterene loopes frem i denne funktion
       function visRetter() {
         console.log(retter);
         pizzaslices.innerHTML = "";
-        // For hver delikatesse defineret i database, skal disse klones og vises
+        // For hver ret defineret i database, skal disse klones og vises
         retter.forEach((ret) => {
           console.log("hey");
           if (ret.inddelinger.includes(parseInt((inddelinger.id = "30")))) {
@@ -163,9 +160,6 @@ get_header();
             klon.querySelector("#anbefaling").textContent = ret.anbefaling;
             klon.querySelector(".pris").textContent = ret.pris + " kr.";
             klon.querySelector("img").src = ret.billede.guid;
-            // klon
-            //   .querySelector("article")
-            //   .addEventListener("click", () => visDetaljer(ret));
             sandwiches.appendChild(klon);
           }
         });
